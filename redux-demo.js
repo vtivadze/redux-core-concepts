@@ -11,7 +11,7 @@ const counterReducer = (state = { counter: 0}, action) => {
 const store = redux.createStore(counterReducer);
 
 // get initial state for testing purposes
-console.log(store.getState());
+// console.log(store.getState());
 
 // react on changing of state
 const counterSubscriber = () => {
@@ -21,3 +21,6 @@ const counterSubscriber = () => {
 
 // subscribe on updating of state
 store.subscribe(counterSubscriber);
+
+// dispatch action of type 'increment'
+store.dispatch({type: 'increment'});
