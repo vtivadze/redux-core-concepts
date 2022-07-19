@@ -1,7 +1,7 @@
 const redux = require('redux');
 
 // reducer udates state (pure function)
-const counterReducer = (state, action) => {
+const counterReducer = (state = { counter: 0}, action) => {
   return {
     counter: state.counter + 1,
   };
