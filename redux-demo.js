@@ -2,9 +2,13 @@ const redux = require('redux');
 
 // reducer udates state (pure function)
 const counterReducer = (state = { counter: 0}, action) => {
-  return {
-    counter: state.counter + 1,
-  };
+  if (action.type === 'increment') {
+    return {
+      counter: state.counter + 1,
+    };
+  }
+
+  return state;
 };
 
 // create state store which will be updated by 'counterReducer'
